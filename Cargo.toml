@@ -6,3 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+piston2d-opengl_graphics = "0.82.0"
+piston2d-graphics = "0.43.0"
+piston = "0.53.2"
+rand = "0.8.5"
+
+[dependencies.pistoncore-glutin_window]
+git = "https://github.com/PistonDevelopers/glutin_window"
