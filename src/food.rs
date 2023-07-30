@@ -9,7 +9,10 @@ pub struct Food {
 
 impl Food {
     pub(crate) fn ate_the_food(&mut self, snake: &Snake) -> bool {
-        let face = snake.snake_body.front().unwrap();
+        let face = snake.snake_body.front().unwrap_or_else(|| {
+            eprintln!("Body is empty!");
+            std::process::exit(1);
+        });
         face.0 == self.x && face.1 == self.y
     }
 

@@ -1,7 +1,5 @@
 use std::collections::LinkedList;
-
 use opengl_graphics;
-
 use piston::input;
 
 #[derive(Clone, PartialEq)]

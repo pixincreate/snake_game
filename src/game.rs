@@ -2,9 +2,10 @@ use opengl_graphics::GlGraphics;
 use piston::input;
 use rand::Rng;
 
-use crate::food::Food;
-use crate::snake::Direction;
-use crate::snake::Snake;
+use crate::{
+    food::Food,
+    snake::{Direction, Snake},
+};
 
 pub struct Game {
     pub gl_graphics: GlGraphics,

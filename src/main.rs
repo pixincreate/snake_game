@@ -1,25 +1,18 @@
-// // Snake Xenzia
-// //
-// // Author: Pa1NarK
+// Snake Xenzia
+//
+// Author: Pa1NarK
 use glutin_window::GlutinWindow;
-use opengl_graphics::GlGraphics;
-use opengl_graphics::OpenGL;
-use piston::ButtonEvent;
-use piston::RenderEvent;
-use piston::UpdateEvent;
-use piston::{input, window};
-use snake_game::food;
-use snake_game::game;
-use snake_game::snake;
-use std::collections::LinkedList;
-use std::iter::FromIterator;
+use opengl_graphics::{GlGraphics, OpenGL};
+use piston::{input, window, ButtonEvent, RenderEvent, UpdateEvent};
+use snake_game::{food, game, snake};
+use std::{collections::LinkedList, iter::FromIterator};
 
 fn main() {
     let opengl = OpenGL::V4_5;
 
-    const COLUMNS: u32 = 30;
-    const ROWS: u32 = 20;
-    const SQUARE_WIDTH: u32 = 20;
+    const COLUMNS: u32 = 50;
+    const ROWS: u32 = 50;
+    const SQUARE_WIDTH: u32 = 15;
 
     const WIDTH: u32 = COLUMNS * SQUARE_WIDTH;
     const HEIGHT: u32 = ROWS * SQUARE_WIDTH;
