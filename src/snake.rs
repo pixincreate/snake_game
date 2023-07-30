@@ -1,6 +1,6 @@
-use std::collections::LinkedList;
 use opengl_graphics;
 use piston::input;
+use std::collections::LinkedList;
 
 #[derive(Clone, PartialEq)]
 pub enum Direction {

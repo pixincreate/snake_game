@@ -2,7 +2,11 @@
 name = "snake_game"
 version = "0.2.0"
 edition = "2021"
-author = "PiXinCreate (Pa1NarK)"
+authors = ["PiXinCreate (Pa1NarK)"]
+description = "A simple snake game made with Rust and Piston"
+readme = "README.md"
+keywords = ["snake", "game", "rust", "piston"]
+repository = "https://github.com/pixincreate/snake_game"
 
 [dependencies]
 piston2d-opengl_graphics = "0.82.0"
@@ -12,3 +16,7 @@ rand = "0.8.5"
 
 [dependencies.pistoncore-glutin_window]
 git = "https://github.com/PistonDevelopers/glutin_window"
+
+[[bin]]
+name = "snake_xenzia"
+path = "src/main.rs"

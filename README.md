@@ -1,5 +1,7 @@
 # Snake Xenzia
 
+Execute `cargo doc --open` to get reference to all the methods, functions and libs used.
+
 ## Usage
 
 - Clone this repo
@@ -16,3 +18,22 @@
 
 - Make the code more robust and error safe
 - Add bonus food every 5 points
+
+## Tree
+
+```tree
+SNAKE_GAME
+|   .gitignore
+|   Cargo.lock
+|   Cargo.toml
+|   README.md
+|   
++---src
+|       food.rs
+|       game.rs
+|       lib.rs
+|       main.rs
+|       snake.rs
+|       
+\---target
+```

@@ -1,0 +1,53 @@
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Rust stable
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable  
+
+      - name: Install Clippy
+        run: rustup component add clippy
+
+      - name: Run Clippy
+        run: cargo clippy --all-targets --all-features
+
+      - name: Install Rust nightly
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+
+      - name: Install Rustfmt
+        run: rustup component add rustfmt --toolchain nightly
+
+      - name: Run Rustfmt
+        run: cargo +nightly fmt --all -- --check
+
+      - name: Build release artifacts
+        run: cargo build --release
+
+      - name: Archive artifacts
+        run: |
+          mkdir artifacts
+          cp target/release/* artifacts/
+
+      - name: Upload Release Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-artifacts
+          path: artifacts/
