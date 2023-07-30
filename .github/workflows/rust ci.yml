@@ -44,7 +44,7 @@ jobs:
       - name: Archive artifacts
         run: |
           mkdir artifacts
-          cp target/release/* artifacts/
+          cp target/release/build/* artifacts/
 
       - name: Upload Release Artifacts
         uses: actions/upload-artifact@v2
