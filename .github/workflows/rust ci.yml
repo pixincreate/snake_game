@@ -38,16 +38,3 @@ jobs:
       - name: Run Rustfmt
         run: cargo +nightly fmt --all -- --check
 
-      - name: Build release artifacts
-        run: cargo build --release
-
-      - name: Archive artifacts
-        run: |
-          mkdir artifacts
-          cp target/release/build/* artifacts/
-
-      - name: Upload Release Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: release-artifacts
-          path: artifacts/
