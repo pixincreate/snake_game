@@ -12,7 +12,7 @@ repository = "https://github.com/pixincreate/snake_game"
 piston2d-opengl_graphics = "0.82.0"
 piston2d-graphics = "0.43.0"
 piston = "0.53.2"
-rand = "0.8.5"
+rand = "0.9.3"
 
 [dependencies.pistoncore-glutin_window]
 git = "https://github.com/PistonDevelopers/glutin_window"
